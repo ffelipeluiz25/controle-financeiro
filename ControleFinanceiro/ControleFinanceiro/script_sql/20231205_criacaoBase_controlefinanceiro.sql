@@ -25,7 +25,7 @@ INSERT INTO `Usuario` (`Id`, `NomeCompleto`, `CPF`, `Login`, `Senha`, `IdStatus`
 (1, 'Luiz Felipe', '06852444902', 'ffelipeluiz25@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 1, NULL, now());
 
 CREATE TABLE Funcionalidade (
-  `Id` int(11) NOT NULL,
+  `Id` int(11) primary key auto_increment NOT NULL,
   `Descricao` varchar(50) DEFAULT NULL,
   `IdStatus` int(11) DEFAULT 1 NOT NULL,
   `IdUsuarioAlteracao` int(11) DEFAULT 1 NOT NULL,
@@ -35,3 +35,18 @@ CREATE TABLE Funcionalidade (
 ALTER TABLE Funcionalidade
 ADD CONSTRAINT `Funcionalidade_ibfk_1` FOREIGN KEY (`IdStatus`) REFERENCES `Status` (`Id`),
 ADD CONSTRAINT `Funcionalidade_ibfk_2` FOREIGN KEY (`IdUsuarioAlteracao`) REFERENCES `Usuario` (`Id`);
+
+insert into Funcionalidade(Descricao,IdStatus,IdUsuarioAlteracao,DataCriacao) values('Permite',1,1,now());
+
+CREATE TABLE `UsuarioFuncionalidade` (
+  `Id` int(11) primary key auto_increment NOT NULL,
+  `IdUsuario` int(11) NOT NULL,
+  `IdFuncionalidade` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE UsuarioFuncionalidade
+ADD CONSTRAINT `UsuarioFuncionalidade_ibfk_1` FOREIGN KEY (`IdUsuario`) REFERENCES `Usuario` (`Id`),
+ADD CONSTRAINT `UsuarioFuncionalidade_ibfk_2` FOREIGN KEY (`IdFuncionalidade`) REFERENCES `Funcionalidade` (`Id`);
+
+insert into UsuarioFuncionalidade (IdUsuario,IdFuncionalidade) values(1,1);
+insert into UsuarioFuncionalidade (IdUsuario,IdFuncionalidade) values(1,2);

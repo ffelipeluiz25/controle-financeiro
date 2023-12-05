@@ -6,7 +6,6 @@ namespace ControleFinanceiro.Data.DTOs
         public int Id { get; set; }
         public int IdUsuarioAlteracao { get; set; }
         public int IdStatus { get; set; }
-        public string Host { get; set; }
         public DateTime DataCriacao { get; set; } = DateTime.Now;
         public string DataCriacaoHoraFormatado
         {

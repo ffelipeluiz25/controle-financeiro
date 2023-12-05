@@ -84,16 +84,20 @@ function personalizaMenu() {
     }
 }
 
-function expandirMenuProtocolo() {
-    if ($('#menuProtocolo').hasClass('collapsed')) {
-        $('#menuProtocolo').removeClass('collapsed');
-        $('#collapsePages').removeClass('d-none');
-        $('#collapsePages').addClass('d-block');
+function expandirMenuDespesa() {
+    if ($('#menuDespesas').hasClass('collapsed')) {
+        $('#menuDespesas').removeClass('collapsed');
+        $('#collapsePagesDespesa').removeClass('d-none');
+        $('#collapsePagesDespesa').addClass('d-block');
+        $('#collapsePagesDespesaRecorrente').removeClass('d-none');
+        $('#collapsePagesDespesaRecorrente').addClass('d-block');
     }
     else {
-        $('#menuProtocolo').addClass('collapsed');
-        $('#collapsePages').removeClass('d-block');
-        $('#collapsePages').addClass('d-none');
+        $('#menuDespesas').addClass('collapsed');
+        $('#collapsePagesDespesa').removeClass('d-block');
+        $('#collapsePagesDespesa').addClass('d-none');
+        $('#collapsePagesDespesaRecorrente').removeClass('d-block');
+        $('#collapsePagesDespesaRecorrente').addClass('d-none');
     }
 }
 

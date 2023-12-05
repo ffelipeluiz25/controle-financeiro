@@ -7,10 +7,7 @@ namespace ControleFinanceiro
         {
             bundles.Add(new Bundle("~/bundles/bootstrap").Include("~/Scripts/bootstrap.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                        "~/Content/styles.css",
-                        "~/Content/bootstrap.css",
-                        "~/Content/styles.min.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/bootstrap.css", "~/Content/styles.css"));
         }
     }
 }

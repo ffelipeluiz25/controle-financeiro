@@ -1,0 +1,70 @@
+
+======================================
+CADASTROS
+======================================
+
+tela de cadastro Tipo Despesa
+tela de cadastro Tipo Despesa Nao Recorrentes
+tela de cadatro de cartoes de credito
+	- data melhor de compra/ data fechamento da fatura
+
+======================================
+RECEITAS
+======================================
+Receitas
+
+	Tipo de Receitas           Valor                    Data                Data limite
+		Salario					2500				05/12/2023
+		Salario extra			2500				05/12/2023           05/03/2024
+		free lance				2500				05/12/2023           05/03/2024
+		Jaque					1380				05/12/2023           05/03/2024
+
+
+======================================
+DESPESAS
+======================================
+
+cadastro recorrente considerar parcelamento no pix para uma pessoa/empresa especifica
+
+-Cadastro de Despesas Recorrentes 
+
+				Tipo Despesa                Valor                  Data de Vencimento      Data Limite da Recorrencia
+					Luz						240,00			        10/mes	
+					Agua					150,00					10/mes
+					Aluguel					850,00					14/mes		
+				Transferencia Agendada		850,00					14/mes		                   14/01/2023
+				Luiz Felipe Notebook        350,00 				    14/mes		                   14/01/2023
+	
+	
+Descricao de Despesa     	tipo de despesa 			 Valor           Data Pagamento
+	servico de manutenção		PIX			   			440,00					10/mes corrente
+	pix da loginha				DEBITO					440,00					10/mes corrente
+	pix da loginha				TRANSFERENCIA			440,00					10/mes corrente
+	Luiz Felipe Notebook		PIX						3500,00					10/mes corrente
+	
+	
+
+
+despesas de Cartao de Credito
+
+
+Cartao de credito       Data 
+	Visa				10/01/2024
+	Master
+	Banco Pan
+	Riachuelo
+	
+-na apresentação da grid ordenar por parceladas
+-quando fizer um lançamento parcelado criar todas as parcelas nos 
+	meses subsequentes respeitando a data de fechamento de compra de cada cartao
+
+					Descricao da despsa                   valor       valor da parcela      data  de compra      parcelado
+						Santa marta							295,00			5.90					25/12			 1/2
+						Santa marta							295,00			5.90					28/12			 5/10 
+						Santa marta							295,00			35.90					30/12			 1/12
+						Santa marta							295,00									03/12				
+						Santa marta							295,00									04/12				
+						Santa marta							295,00									10/12				
+						Santa marta							295,00									13/12				
+		
+						RESUMO																					TOTAL:		

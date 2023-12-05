@@ -29,6 +29,7 @@ namespace ControleFinanceiro.DependencyInjection
         private void DependencyInjectionRepository()
         {
             Kernel.Bind<ILoginRepository>().To<LoginRepository>();
+            Kernel.Bind<IFuncionalidadeRepository>().To<FuncionalidadeRepository>();
             Kernel.Bind<IStatusRepository>().To<StatusRepository>();
             Kernel.Bind<IUsuarioRepository>().To<UsuarioRepository>();
             Kernel.Bind<IUsuarioFuncionalidadeRepository>().To<UsuarioFuncionalidadeRepository>();

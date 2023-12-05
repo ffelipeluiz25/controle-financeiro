@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ControleFinanceiro</title>
+    <title>Controle Financeiro</title>
     <link rel="stylesheet" type="text/css" href="https://printjs-4de6.kxcdn.com/print.min.css" />
     <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
     <link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
@@ -18,7 +18,7 @@
         </div>
     </div>
     <nav class="sb-topnav navbar navbar-expand">
-        <a class="navbar-brand ps-3" href="/Home" title="Tela Inicial - Certifica Já"><img src="~/Imagens/logo-certifica-ja-white.png" alt="logo-certifica-ja" class="logo-system"></a>
+        <a class="navbar-brand ps-3"></a>
         <button class="btn btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fi fi-rr-menu-burger"></i></button>
         <ul class="navbar-nav ms-auto me-0 me-md-3 my-2 my-md-0">
             <li class="nav-item dropdown">
@@ -41,40 +41,23 @@
                             <div class="sb-nav-link-icon"><i class="fi fi-rr-home"></i></div>
                             Início
                         </a>
-                        <a id="menuProtocolo" class="nav-link collapsed" onclick="expandirMenuProtocolo()">
-                            <div class="sb-nav-link-icon"><i class="fi fi-rr-document"></i></div>
-                            Protocolos
-                            <div class="sb-sidenav-collapse-arrow"><i class="fi fi-rr-angle-small-down"></i></div>
-                        </a>
-                        <div class="collapse d-none" id="collapsePages">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a id="menuListaProtocolo" class="nav-link" href="/Protocolo/ListaProtocolo">Listagem de Protocolos</a>
-                                <a id="menuNovoProtocolo" class="nav-link" href="/Protocolo/NovoProtocolo">Novo Protocolo</a>
-                            </nav>
-                        </div>
-                        <a id="menuRecibo" class="nav-link" href="/Recibo" title="Recibos">
+                        <a id="menuReceitas" class="nav-link" href="/Receita" title="Receitas">
                             <div class="sb-nav-link-icon"><i class="fi fi-rr-memo"></i></div>
-                            Recibos
+                            Receitas
                         </a>
-                        <a id="menuFinanceiro" class="nav-link collapsed" title="Financeiro" onclick="expandirMenuFinanceiro()">
-                            <div class="sb-nav-link-icon"><i class="fi fi-rr-usd-circle"></i></div>
-                            Financeiro
+                        <a id="menuDespesas" class="nav-link collapsed" title="Despesa" onclick="expandirMenuDespesa()">
+                            <div class="sb-nav-link-icon"><i class="fi fi-rr-chart-histogram"></i></div>
+                            Despesas
                             <div class="sb-sidenav-collapse-arrow"><i class="fi fi-rr-angle-small-down"></i></div>
                         </a>
-                        <div class="collapse d-none" id="collapsePagesFinanceiro">
+                        <div class="collapse d-none" id="collapsePagesDespesaRecorrente">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a id="menuCaixa" class="nav-link" href="/Financeiro">Fechamento de Caixa</a>
-                                <a id="menuGastosGerais" class="nav-link" href="/GastoGeral">Gastos Gerais</a>
+                                <a id="menuLancamentoDespesasRecorrentes" class="nav-link" href="/LancamentoDespesaRecorrente">Lançamento de Despesas Recorrentes</a>
                             </nav>
                         </div>
-                        <a id="menuRelatorios" class="nav-link collapsed" title="Relatório" onclick="expandirMenuRelatorio()">
-                            <div class="sb-nav-link-icon"><i class="fi fi-rr-chart-histogram"></i></div>
-                            Relatórios
-                            <div class="sb-sidenav-collapse-arrow"><i class="fi fi-rr-angle-small-down"></i></div>
-                        </a>
-                        <div class="collapse d-none" id="collapsePagesRelatorios">
+                        <div class="collapse d-none" id="collapsePagesDespesa">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a id="menuEntradaSaidaDiario" class="nav-link" href="/RelatorioEntradaSaidaDiario">Entrada/Saida Diário</a>
+                                <a id="menuLancamentoDespesas" class="nav-link" href="/LacamentoDespesa">Lançamento de Despesas</a>
                             </nav>
                         </div>
                     </div>

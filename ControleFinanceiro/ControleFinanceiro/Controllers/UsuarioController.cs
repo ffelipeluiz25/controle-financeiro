@@ -85,7 +85,6 @@ namespace ControleFinanceiro.Controllers
             if (ModelState.IsValid)
             {
                 usuario.IdUsuarioAlteracao = _usuarioUsuarioId;
-                usuario.Host = _usuarioHost;
                 usuario.IdStatus = usuario.StatusSituacaoFormatado.Equals(true) ? (int)EnumStatus.Ativo : (int)EnumStatus.Inativo;
                 if (usuario.Id == 0)
                     usuario.Senha = Utils.GerarHashMd5(usuario.Senha);

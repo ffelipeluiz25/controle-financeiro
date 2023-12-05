@@ -1,7 +1,7 @@
 ﻿using ControleFinanceiro.Data.DTOs;
+using ControleFinanceiro.Data.Enumeradores;
 using ControleFinanceiro.Data.Factory;
 using ControleFinanceiro.Data.Repositorios.Interfaces;
-using ControleFinanceiro.Data.Enumeradores;
 using Dapper;
 using MySql.Data.MySqlClient;
 using System;
@@ -125,18 +125,17 @@ namespace ControleFinanceiro.Data.Repositorios
             {
                 tran = connection.BeginTransaction();
 
-                var query = @"insert into Usuario (NomeCompleto, CPF, Login, Senha, IdStatus, IdUsuarioAlteracao, Host, DataCriacao)
-                                           values (@NomeCompleto, @CPF, @Login, @Senha, @IdStatus, @IdUsuarioAlteracao, @Host, @DataCriacao)";
+                var query = @"insert into Usuario (NomeCompleto, CPF, Login, Senha, IdStatus, IdUsuarioAlteracao, DataCriacao)
+                                           values (@NomeCompleto, @CPF, @Login, @Senha, @IdStatus, @IdUsuarioAlteracao, @DataCriacao)";
 
                 var parametros = new
                 {
-                    NomeCompleto = usuario.NomeCompleto,
+                    usuario.NomeCompleto,
                     CPF = usuario.CPF.Replace(".", "").Replace(".", "").Replace("-", ""),
-                    Login = usuario.Login,
-                    Senha = usuario.Senha,
-                    IdStatus = usuario.IdStatus,
-                    IdUsuarioAlteracao = usuario.IdUsuarioAlteracao,
-                    Host = usuario.Host,
+                    usuario.Login,
+                    usuario.Senha,
+                    usuario.IdStatus,
+                    usuario.IdUsuarioAlteracao,
                     DataCriacao = DateTime.Now
                 };
 
@@ -192,20 +191,18 @@ namespace ControleFinanceiro.Data.Repositorios
                                 CPF = @CPF,
                                 Login = @Login,
                                 IdStatus = @IdStatus,
-                                IdUsuarioAlteracao = @IdUsuarioAlteracao,
-                                Host = @Host
+                                IdUsuarioAlteracao = @IdUsuarioAlteracao
                               WHERE 
                                 Id = @Id";
 
                 var parametros = new
                 {
-                    NomeCompleto = usuario.NomeCompleto,
+                    usuario.NomeCompleto,
                     CPF = usuario.CPF.Replace(".", "").Replace(".", "").Replace("-", ""),
-                    Login = usuario.Login,
-                    IdStatus = usuario.IdStatus,
-                    IdUsuarioAlteracao = usuario.IdUsuarioAlteracao,
-                    Host = usuario.Host,
-                    Id = usuario.Id
+                    usuario.Login,
+                    usuario.IdStatus,
+                    usuario.IdUsuarioAlteracao,
+                    usuario.Id
                 };
 
                 //Insere o Usuário
