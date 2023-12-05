@@ -1,0 +1,9 @@
+﻿@model Certificare.Data.DTOs.UsuarioDTO
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="divEditarUsuario"></div>
+<input hidden value="@Model.Id" id="IdUsuario" />
+@section scripts {
+    <script src="~/Scripts/Views/Usuario/editarUsuario.js"></script>
+}

@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main>
+    <div class="container-fluid p-4">
+        <div class="d-flex justify-content-between">
+            <h1 class="text-uppercase">Usuários</h1>
+            <div class="d-flex align-items-center gap-2">
+                <a href="/Usuario/NovoUsuario" class="btn btn-primary rounded-pill" title="">Novo usuário</a>
+            </div>
+        </div>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/Home">Início</a></li>
+            <li class="breadcrumb-item active">Usuários</li>
+        </ol>
+        <div class="card mb-4">
+            <div class="card-header text-uppercase">
+                Buscar
+            </div>
+            <div class="card-body">
+                <form class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <label for="cpf" class="form-label">CPF</label>
+                        <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" maxlength="11">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <label for="nomeCompleto" class="form-label">Nome Completo</label>
+                        <input type="text" onkeyup="isUpperCase(this)" class="form-control" id="nomeCompleto" placeholder="Nome Completo">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="email@email.com">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <label for="status" class="form-label">Situação</label>
+                        <select id="status" class="form-select" asp-items="@ViewBag.Status">
+                            @foreach (System.Web.Mvc.SelectListItem item in ViewBag.Status)
+                            {
+                                <option value="@item.Value">@item.Text</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-1 d-flex align-items-end">
+                        <button type="button" id="btnBuscar" class="btn btn-outline-primary rounded-pill">Buscar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                RESULTADO
+            </div>
+            <div class="card-body" id="cardBody">
+            </div>
+        </div>
+    </div>
+</main>
+@section scripts {
+    <script src="~/Scripts/Views/Usuario/listarUsuarios.js"></script>
+}

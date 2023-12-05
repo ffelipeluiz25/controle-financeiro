@@ -1,0 +1,35 @@
+﻿@model Certificare.Data.DTOs.UsuarioListagemDTO
+@using Certificare.Helpers;
+@using Certificare.Data.Enumeradores;
+<table id="dataTables" class="table table-custom">
+    <thead>
+        <tr>
+            <th>CPF</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Situação</th>
+            <th style="text-align: end;">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Certificare.Data.DTOs.UsuarioDTO usuario in Model.ListaUsuario)
+        {
+            if (usuario != null)
+            {
+
+                <tr>
+                    <td>@(usuario.CPF.Substring(0, 3) + "." + usuario.CPF.Substring(3, 3) + "." + usuario.CPF.Substring(6, 3) + "-" + usuario.CPF.Substring(9, 2))</td>
+                    <td>@usuario.NomeCompleto</td>
+                    <td>@usuario.Login</td>
+                    <td><span class="badge @(usuario.StatusDescricao.ToLower() == "ativo" ? "bg-success" : "bg-danger")">@usuario.StatusDescricao.ToLower()</span></td>
+                    <td>
+                        <div class="gap-2 text-end">
+                            <button type="button" data-bs-toggle="tooltip" data-bs-title="Editar" @(Model.PermiteAlterarUsuarios ? "" : "disabled") onclick="location.href='@Url.Action("EditarUsuario", "Usuario", new { idUsuario = @usuario.Id })';return false;" class="btn btn-outline-secondary btn-sm rounded-pill border-0"><i class="fi fi-rr-pencil"></i></button>
+                            <button type="button" data-bs-toggle="tooltip" data-bs-title="Inativar" @(Model.PermiteInativarUsuarios ? (usuario.StatusDescricao.ToLower().Equals(EnumStatus.Ativo.GetDisplayAttributeFrom(typeof(EnumStatus)).ToLower()) ? "" : "disabled") : "disabled") onclick="inativarUsuario(@usuario.Id)" class="btn btn-outline-danger btn-sm rounded-pill border-0"><i class="fi fi-rr-ban"></i></button>
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

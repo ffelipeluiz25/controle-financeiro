@@ -1,0 +1,85 @@
+﻿@model Certificare.Data.DTOs.UsuarioDTO
+<main>
+    <div class="container-fluid p-4">
+        <div class="d-flex justify-content-between">
+            <h1 class="text-uppercase">@(Model.Id == 0 ? "Novo Usuário" : "Editar Usuário")</h1>
+        </div>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/Home">Início</a></li>
+            <li class="breadcrumb-item"><a href="/Usuario">Usuários</a></li>
+            <li class="breadcrumb-item active">@(Model.Id == 0 ? "Novo Usuário" : "Editar Usuário")</li>
+        </ol>
+
+        <div class="card mb-4">
+            <div class="card-header text-uppercase">
+                @(Model.Id == 0 ? "Novo Usuário" : "Editar Usuário")
+            </div>
+            <div class="card-body">
+                <form class="row g-3" id="frmUsuario">
+                    <input type="text" class="form-control" id="Id" name="Id" value="@Model.Id" hidden>
+                    <input type="text" class="form-control" id="RedirectLogin" name="RedirectLogin" value="@Model.RedirectLogin" hidden>
+                    <input type="text" class="form-control" id="IdStatus" name="IdStatus" value="@Model.IdStatus" hidden>
+                    <input type="text" class="form-control" id="StatusSituacaoFormatado" name="StatusSituacaoFormatado" value="@Model.StatusSituacaoFormatado" hidden>
+
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <label for="cpf" class="form-label">CPF</label>
+                        <input type="text" autocomplete="off" onpaste="return false;" onCopy="return false" onCut="return false" maxlength="11" class="form-control" id="cpf" name="CPF" placeholder="000.000.000-00" value="@Model.CPF">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label for="nomeCompleto" class="form-label">Nome Completo</label>
+                        <input type="text" onkeyup="isUpperCase(this)" class="form-control" id="nomeCompleto" name="NomeCompleto" placeholder="Nome Completo" value="@Model.NomeCompleto">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <label for="dataCriacao" class="form-label">Data de Criação</label>
+                        <input type="text" class="form-control" id="dataCriacao" name="DataCriacao" value="@Model.DataCriacao" disabled>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <label for="Situacao" class="form-label">Situação</label>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" onchange="alteraStatus()" name="Situacao" role="switch" id="Situacao" checked="@Model.Situacao">
+                            <label class="form-check-label" for="Situacao">Ativo</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label for="login" class="form-label">E-mail / Login</label>
+                        <input type="text" class="form-control" id="login" name="Login" placeholder="login" value="@Model.Login">
+                    </div>
+                    @if (Model.Id == 0)
+                    {
+                        <div class="col-12 col-md-6 col-lg-6">
+                            <label for="senha" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="senha" name="Senha" placeholder="Digite uma senha" value="@Model.Senha">
+                        </div>
+                    }
+                    <div class="row mt-3">
+                        <div class="col"><hr></div>
+                    </div>
+                    <h5>Adicione as funcionalidades ao usuário.</h5>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <ul class="list-group list-group-flush">
+                                @{
+                                    foreach (Certificare.Data.DTOs.FuncionalidadeDTO item in ViewBag.Funcionalidade)
+                                    {
+                                        <li class="list-group-item">
+                                            <input class="form-check-input me-1 funcionalidade" onchange="funcionalidadeChecada()" type="checkbox" value="" id="@item.Id" @(item.Checado ? "checked" : "")>
+                                            <label class="form-check-label" for="@item.Id">@item.Descricao</label>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+                <br />
+                <br />
+                <div class="row">
+                    <div class="col-11"></div>
+                    <div class="col-1">
+                        <button type="button" id="btnSalvar" class="btn btn-primary rounded-pill ms-2">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

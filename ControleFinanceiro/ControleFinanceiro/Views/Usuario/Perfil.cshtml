@@ -1,0 +1,48 @@
+﻿@model Certificare.Data.DTOs.UsuarioDTO
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main>
+    <div class="container-fluid p-4">
+        <div class="d-flex justify-content-between">
+            <h1 class="text-uppercase">Meu Perfil</h1>
+        </div>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/Home">Início</a></li>
+            <li class="breadcrumb-item active">Meu Perfil</li>
+        </ol>
+
+        <div class="card mb-4">
+            <div class="card-header text-uppercase">
+                Meu Perfil
+            </div>
+            <div class="card-body">
+                <form class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <label for="cpf" class="form-label">CPF</label>
+                        <input type="text" class="form-control" id="cpf" name="CPF" placeholder="000.000.000-00" value="@Model.CPF" disabled>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label for="nomeCompleto" class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control" id="nomeCompleto" name="NomeCompleto" placeholder="Nome Completo" value="@Model.NomeCompleto" disabled>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <label for="dataCriacao" class="form-label">Data de Criação</label>
+                        <input type="text" class="form-control" id="dataCriacao" name="DataCriacao" placeholder="DD/MM/AAAA" value="@Model.DataCriacao" disabled>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <label for="statusDescricao" class="form-label">Situação</label>
+                        <input type="text" class="form-control" id="statusDescricao" name="StatusDescricao" placeholder="Situação" value="@Model.StatusDescricao" disabled>
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-8">
+                        <label for="eMail" class="form-label">E-mail / Login</label>
+                        <input type="email" class="form-control" id="eMail" placeholder="email@email.com" value="@Model.Login" disabled>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+@section scripts {
+    <script src="~/Scripts/Views/Usuario/perfil.js"></script>
+}
