@@ -1,5 +1,5 @@
 ﻿
-namespace Certificare.Data.DTOs
+namespace ControleFinanceiro.Data.DTOs
 {
     public class UsuarioRequestDTO
     {

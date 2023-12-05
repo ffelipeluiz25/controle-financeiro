@@ -1,7 +1,7 @@
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Certificare.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Certificare.App_Start.NinjectWebCommon), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(ControleFinanceiro.App_Start.NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(ControleFinanceiro.App_Start.NinjectWebCommon), "Stop")]
 
-namespace Certificare.App_Start
+namespace ControleFinanceiro.App_Start
 {
     using System;
     using System.Web;

@@ -1,5 +1,5 @@
 ﻿using System.Web.Optimization;
-namespace Certificare
+namespace ControleFinanceiro
 {
     public class BundleConfig
     {

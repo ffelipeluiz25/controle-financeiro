@@ -1,8 +1,8 @@
-﻿using Certificare.Data.DTOs;
-using Certificare.Services.Interfaces;
+﻿using ControleFinanceiro.Data.DTOs;
+using ControleFinanceiro.Services.Interfaces;
 using ControleFinanceiro.Data.Repositorios.Interfaces;
 using System.Collections.Generic;
-namespace Certificare.Services
+namespace ControleFinanceiro.Services
 {
     public class FuncionalidadeService : IFuncionalidadeService
     {

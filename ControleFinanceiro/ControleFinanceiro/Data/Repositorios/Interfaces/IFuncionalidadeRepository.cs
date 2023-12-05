@@ -1,4 +1,4 @@
-﻿using Certificare.Data.DTOs;
+﻿using ControleFinanceiro.Data.DTOs;
 using System.Collections.Generic;
 namespace ControleFinanceiro.Data.Repositorios.Interfaces
 {

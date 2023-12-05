@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Certificare.Data.DTOs
+namespace ControleFinanceiro.Data.DTOs
 {
     public class BaseDTO
     {

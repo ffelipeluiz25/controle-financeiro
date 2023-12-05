@@ -5,7 +5,7 @@ using Ninject.Web.Common;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-namespace Certificare.Extends
+namespace ControleFinanceiro.Extends
 {
     public class NinjectMvcHttpApplicationPlugin : NinjectComponent, INinjectHttpApplicationPlugin
     {

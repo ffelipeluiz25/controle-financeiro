@@ -1,6 +1,6 @@
-﻿using Certificare.Helpers;
+﻿using ControleFinanceiro.Helpers;
 using MySql.Data.MySqlClient;
-namespace Certificare.Data.Factory
+namespace ControleFinanceiro.Data.Factory
 {
     public class FactoryDB
     {

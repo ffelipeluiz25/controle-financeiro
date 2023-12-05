@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Security.Cryptography;
 using System.Text;
-namespace Certificare.Helpers
+namespace ControleFinanceiro.Helpers
 {
     public static class Utils
     {

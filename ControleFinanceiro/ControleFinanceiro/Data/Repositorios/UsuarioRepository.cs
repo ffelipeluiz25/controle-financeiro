@@ -1,13 +1,13 @@
-﻿using Certificare.Data.DTOs;
-using Certificare.Data.Factory;
-using Certificare.Data.Repositorios.Interfaces;
+﻿using ControleFinanceiro.Data.DTOs;
+using ControleFinanceiro.Data.Factory;
+using ControleFinanceiro.Data.Repositorios.Interfaces;
 using ControleFinanceiro.Data.Enumeradores;
 using Dapper;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-namespace Certificare.Data.Repositorios
+namespace ControleFinanceiro.Data.Repositorios
 {
     public class UsuarioRepository : IUsuarioRepository
     {

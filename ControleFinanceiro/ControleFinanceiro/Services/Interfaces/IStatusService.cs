@@ -1,8 +1,8 @@
-﻿using Certificare.Data.DTOs;
+﻿using ControleFinanceiro.Data.DTOs;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace Certificare.Services.Interfaces
+namespace ControleFinanceiro.Services.Interfaces
 {
     public interface IStatusService
     {

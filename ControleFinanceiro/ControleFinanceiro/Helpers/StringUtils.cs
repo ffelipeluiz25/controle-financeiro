@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Text;
-namespace Certificare.Helpers
+namespace ControleFinanceiro.Helpers
 {
     public static class StringUtils
     {

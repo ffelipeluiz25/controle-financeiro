@@ -1,9 +1,9 @@
 ﻿using Ninject;
-using Certificare.Filter.Interfaces;
+using ControleFinanceiro.Filter.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-namespace Certificare.Filter
+namespace ControleFinanceiro.Filter
 {
     public class NinjectFilterProvider : IFilterProvider
     {

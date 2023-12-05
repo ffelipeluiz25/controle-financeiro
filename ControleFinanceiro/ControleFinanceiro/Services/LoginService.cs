@@ -1,9 +1,9 @@
-﻿using Certificare.Data.DTOs;
-using Certificare.Data.DTOs.Request;
-using Certificare.Repositorios.Interfaces;
-using Certificare.Services.Interfaces;
+﻿using ControleFinanceiro.Data.DTOs;
+using ControleFinanceiro.Data.DTOs.Request;
+using ControleFinanceiro.Repositorios.Interfaces;
+using ControleFinanceiro.Services.Interfaces;
 using System.Threading.Tasks;
-namespace Certificare.Services
+namespace ControleFinanceiro.Services
 {
     public class LoginService : ILoginService
     {

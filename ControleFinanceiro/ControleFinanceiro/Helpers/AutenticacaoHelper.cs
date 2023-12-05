@@ -1,11 +1,11 @@
-﻿using Certificare.Helpers.Interfaces;
+﻿using ControleFinanceiro.Helpers.Interfaces;
 using System.Web;
-namespace Certificare.Helpers
+namespace ControleFinanceiro.Helpers
 {
     public class AutenticacaoHelper : IAutenticacaoHelper
     {
         private readonly HttpContextBase _contextAcessor;
-        const string cookieKey = "certificare_login_session";
+        const string cookieKey = "cf_login_session";
 
         public AutenticacaoHelper(HttpContextBase contextAcessor)
         {

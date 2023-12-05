@@ -1,14 +1,14 @@
-﻿using Certificare.Custom.Attribute;
-using Certificare.Data.DTOs;
-using Certificare.Helpers;
-using Certificare.Services.Interfaces;
+﻿using ControleFinanceiro.Custom.Attribute;
+using ControleFinanceiro.Data.DTOs;
+using ControleFinanceiro.Helpers;
+using ControleFinanceiro.Services.Interfaces;
 using ControleFinanceiro.Data.Enumeradores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
-namespace Certificare.Controllers
+namespace ControleFinanceiro.Controllers
 {
     public class UsuarioController : MasterController
     {

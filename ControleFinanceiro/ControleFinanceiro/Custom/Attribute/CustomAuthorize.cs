@@ -1,12 +1,12 @@
-﻿using Certificare.Helpers;
+﻿using ControleFinanceiro.Helpers;
 using System;
 using System.Web.Mvc;
-namespace Certificare.Custom.Attribute
+namespace ControleFinanceiro.Custom.Attribute
 {
     public class CustomAuthorize : AuthorizeAttribute
     {
 
-        const string cookieKeyPermissoes = "certificare_permissao_session";
+        const string cookieKeyPermissoes = "cf_permissao_session";
         public CustomAuthorize()
         {
         }

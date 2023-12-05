@@ -14,7 +14,7 @@ function carregar() {
     }).done(function (data) {
         $('#divNovoProtocolo').html(data);
 
-        var cookie = getCookie('certificare_login_session');
+        var cookie = getCookie('cf_login_session');
         const nome = atob(cookie).split('\\')[1];
         $('#NomeUsuario').val(nome);
 

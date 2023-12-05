@@ -1,7 +1,7 @@
-﻿using Certificare.Data.DTOs;
-using Certificare.Data.DTOs.Request;
+﻿using ControleFinanceiro.Data.DTOs;
+using ControleFinanceiro.Data.DTOs.Request;
 using System.Threading.Tasks;
-namespace Certificare.Repositorios.Interfaces
+namespace ControleFinanceiro.Repositorios.Interfaces
 {
     public interface ILoginRepository
     {

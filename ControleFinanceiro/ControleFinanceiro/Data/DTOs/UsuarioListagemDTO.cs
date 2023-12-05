@@ -1,7 +1,7 @@
 ﻿using ControleFinanceiro.Data.Enumeradores;
 using System.Collections.Generic;
 using System.Linq;
-namespace Certificare.Data.DTOs
+namespace ControleFinanceiro.Data.DTOs
 {
     public class UsuarioListagemDTO : BaseDTO
     {

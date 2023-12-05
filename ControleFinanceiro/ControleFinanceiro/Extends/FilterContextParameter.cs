@@ -1,6 +1,6 @@
 ﻿using Ninject.Parameters;
 using System.Web.Mvc;
-namespace Certificare.Filter
+namespace ControleFinanceiro.Filter
 {
     public class FilterContextParameter : Parameter
     {

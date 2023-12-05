@@ -1,10 +1,10 @@
-﻿using Certificare.Data.DTOs;
-using Certificare.Data.Repositorios.Interfaces;
-using Certificare.Services.Interfaces;
+﻿using ControleFinanceiro.Data.DTOs;
+using ControleFinanceiro.Data.Repositorios.Interfaces;
+using ControleFinanceiro.Services.Interfaces;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace Certificare.Services
+namespace ControleFinanceiro.Services
 {
     public class StatusService : IStatusService
     {

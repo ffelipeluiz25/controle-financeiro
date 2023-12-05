@@ -1,8 +1,8 @@
-﻿using Certificare.Helpers;
+﻿using ControleFinanceiro.Helpers;
 using ControleFinanceiro.Data.Enumeradores;
 using System.Collections.Generic;
 
-namespace Certificare.Data.DTOs
+namespace ControleFinanceiro.Data.DTOs
 {
     public class UsuarioDTO : BaseDTO
     {

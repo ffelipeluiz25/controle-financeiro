@@ -1,7 +1,7 @@
-﻿using Certificare.Data.DTOs;
+﻿using ControleFinanceiro.Data.DTOs;
 using System.Collections.Generic;
 
-namespace Certificare.Data.Repositorios.Interfaces
+namespace ControleFinanceiro.Data.Repositorios.Interfaces
 {
     public interface IUsuarioFuncionalidadeRepository
     {

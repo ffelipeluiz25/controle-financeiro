@@ -1,6 +1,6 @@
-﻿using Certificare.Data.DTOs;
-using Certificare.Helpers;
-using Certificare.Services.Interfaces;
+﻿using ControleFinanceiro.Data.DTOs;
+using ControleFinanceiro.Helpers;
+using ControleFinanceiro.Services.Interfaces;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 using System.Web.Routing;
-namespace Certificare.Controllers
+namespace ControleFinanceiro.Controllers
 {
     public class MasterController : Controller
     {
@@ -18,7 +18,7 @@ namespace Certificare.Controllers
         public int _usuarioUsuarioId;
         public List<UsuarioFuncionalidadeDTO> _listaFuncionalidadesUsuario;
         private readonly IFuncionalidadeService _funcionalidadeService;
-        const string cookieKeyPermissoes = "certificare_permissao_session";
+        const string cookieKeyPermissoes = "cf_permissao_session";
 
         public MasterController(IFuncionalidadeService funcionalidadeService)
         {
@@ -30,10 +30,10 @@ namespace Certificare.Controllers
             base.Initialize(context);
 
             //Usuario Logado em Cookie
-            var cookie = Request.Cookies["certificare_login_session"];
+            var cookie = Request.Cookies["cf_login_session"];
 
             if (cookie != null)
-                _usuarioSessao = StringUtils.Base64Decode(Request.Cookies["certificare_login_session"] != null ? cookie.Value : string.Empty);
+                _usuarioSessao = StringUtils.Base64Decode(Request.Cookies["cf_login_session"] != null ? cookie.Value : string.Empty);
 
             if (string.IsNullOrEmpty(_usuarioSessao))
                 return;

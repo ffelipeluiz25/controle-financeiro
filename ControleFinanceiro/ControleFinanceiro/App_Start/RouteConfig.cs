@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
-namespace Certificare
+namespace ControleFinanceiro
 {
     public class RouteConfig
     {

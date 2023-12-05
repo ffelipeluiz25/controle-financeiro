@@ -1,7 +1,7 @@
 ﻿using Ninject;
 using System.Collections.Generic;
 using System.Web.Mvc;
-namespace Certificare.Filter
+namespace ControleFinanceiro.Filter
 {
     public class NinjectFilterAttributeFilterProvider : FilterAttributeFilterProvider
     {

@@ -1,4 +1,4 @@
-﻿@model Certificare.Data.DTOs.UsuarioDTO
+﻿@model ControleFinanceiro.Data.DTOs.UsuarioDTO
 <main>
     <div class="container-fluid p-4">
         <div class="d-flex justify-content-between">
@@ -59,7 +59,7 @@
                         <div class="col">
                             <ul class="list-group list-group-flush">
                                 @{
-                                    foreach (Certificare.Data.DTOs.FuncionalidadeDTO item in ViewBag.Funcionalidade)
+                                    foreach (ControleFinanceiro.Data.DTOs.FuncionalidadeDTO item in ViewBag.Funcionalidade)
                                     {
                                         <li class="list-group-item">
                                             <input class="form-check-input me-1 funcionalidade" onchange="funcionalidadeChecada()" type="checkbox" value="" id="@item.Id" @(item.Checado ? "checked" : "")>

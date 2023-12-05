@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
-namespace Certificare.Helpers
+namespace ControleFinanceiro.Helpers
 {
     public static class EnumExtensions
     {

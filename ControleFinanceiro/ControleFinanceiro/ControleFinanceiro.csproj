@@ -158,10 +158,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MasterController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Custom\Attribute\CustomAuthorize.cs" />
     <Compile Include="Data\DTOs\LoginDTO.cs" />
     <Compile Include="Data\DTOs\Request\UsuarioRequestDTO.cs" />
@@ -225,10 +225,7 @@
     <Content Include="Content\styles.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Imagens\error-404-monochrome.svg" />
     <Content Include="Imagens\login.jpg" />
-    <Content Include="Imagens\logo-certifica-ja-white.png" />
-    <Content Include="Imagens\logo-certifica-ja.png" />
     <Content Include="Imagens\manutencao.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\enumStatus.js" />
@@ -288,6 +285,7 @@
     <Content Include="Scripts\Views\Usuario\perfil.js" />
     <Content Include="Scripts\Views\Protocolo\listarProtocolos.js" />
     <Content Include="Scripts\Views\Login\login.js" />
+    <Content Include="script_sql\20231205_criacaoBase_controlefinanceiro.sql" />
     <Content Include="Views\SiteEmManutencao\index.html" />
     <Content Include="Web.config" />
     <Content Include="Views\Web.config" />

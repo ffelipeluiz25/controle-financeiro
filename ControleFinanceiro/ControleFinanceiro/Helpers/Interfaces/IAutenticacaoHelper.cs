@@ -1,5 +1,5 @@
 ﻿using System.Web;
-namespace Certificare.Helpers.Interfaces
+namespace ControleFinanceiro.Helpers.Interfaces
 {
     public interface IAutenticacaoHelper
     {

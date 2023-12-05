@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-namespace Certificare
+namespace ControleFinanceiro
 {
     public class MvcApplication : NinjectHttpApplication
     {

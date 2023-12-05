@@ -1,6 +1,6 @@
-﻿@model Certificare.Data.DTOs.UsuarioListagemDTO
-@using Certificare.Helpers;
-@using Certificare.Data.Enumeradores;
+﻿@model ControleFinanceiro.Data.DTOs.UsuarioListagemDTO
+@using ControleFinanceiro.Helpers;
+@using ControleFinanceiro.Data.Enumeradores;
 <table id="dataTables" class="table table-custom">
     <thead>
         <tr>
@@ -12,7 +12,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (Certificare.Data.DTOs.UsuarioDTO usuario in Model.ListaUsuario)
+        @foreach (ControleFinanceiro.Data.DTOs.UsuarioDTO usuario in Model.ListaUsuario)
         {
             if (usuario != null)
             {

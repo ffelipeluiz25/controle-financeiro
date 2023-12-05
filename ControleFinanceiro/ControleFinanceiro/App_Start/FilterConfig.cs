@@ -1,5 +1,5 @@
 ﻿using System.Web.Mvc;
-namespace Certificare
+namespace ControleFinanceiro
 {
     public class FilterConfig
     {

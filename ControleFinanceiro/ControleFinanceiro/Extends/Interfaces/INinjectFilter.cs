@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-namespace Certificare.Filter.Interfaces
+namespace ControleFinanceiro.Filter.Interfaces
 {
     public interface INinjectFilter
     {

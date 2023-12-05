@@ -1,5 +1,5 @@
-﻿using Certificare.Helpers;
-namespace Certificare.Data.DTOs.Request
+﻿using ControleFinanceiro.Helpers;
+namespace ControleFinanceiro.Data.DTOs.Request
 {
     public class LoginRequestDTO
     {

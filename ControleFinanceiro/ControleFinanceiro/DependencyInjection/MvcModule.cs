@@ -1,16 +1,16 @@
-﻿using Certificare.Data.Repositorios;
-using Certificare.Data.Repositorios.Interfaces;
-using Certificare.Extends;
-using Certificare.Filter;
-using Certificare.Helpers;
-using Certificare.Helpers.Interfaces;
-using Certificare.Repositorios.Interfaces;
-using Certificare.Services;
-using Certificare.Services.Interfaces;
+﻿using ControleFinanceiro.Data.Repositorios;
+using ControleFinanceiro.Data.Repositorios.Interfaces;
+using ControleFinanceiro.Extends;
+using ControleFinanceiro.Filter;
+using ControleFinanceiro.Helpers;
+using ControleFinanceiro.Helpers.Interfaces;
+using ControleFinanceiro.Repositorios.Interfaces;
+using ControleFinanceiro.Services;
+using ControleFinanceiro.Services.Interfaces;
 using Ninject.Modules;
 using Ninject.Web.Common;
 using System.Web.Mvc;
-namespace Certificare.DependencyInjection
+namespace ControleFinanceiro.DependencyInjection
 {
     public class MvcModule : NinjectModule
     {

@@ -9783,7 +9783,7 @@ body {
 
 .bg-login {
   background: url("../../Imagens/login.jpg") center no-repeat;
-  background-size: cover;
+  background-size: auto;
 }
 
 .user {
@@ -10004,7 +10004,7 @@ body {
   flex-grow: 1;
 }
 #layoutAuthentication #layoutAuthentication_content .card {
-  border-radius: 0 0 25px 25px;
+  border-radius: 25px 25px 25px 25px;
 }
 #layoutAuthentication #layoutAuthentication_content .card .card-header {
   background: none;

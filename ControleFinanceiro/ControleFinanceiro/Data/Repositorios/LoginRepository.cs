@@ -1,14 +1,14 @@
-﻿using Certificare.Data.DTOs;
-using Certificare.Data.DTOs.Request;
-using Certificare.Data.Factory;
-using Certificare.Repositorios.Interfaces;
+﻿using ControleFinanceiro.Data.DTOs;
+using ControleFinanceiro.Data.DTOs.Request;
+using ControleFinanceiro.Data.Factory;
+using ControleFinanceiro.Repositorios.Interfaces;
 using ControleFinanceiro.Data.Enumeradores;
 using Dapper;
 using MySql.Data.MySqlClient;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-namespace Certificare.Data.Repositorios
+namespace ControleFinanceiro.Data.Repositorios
 {
     public class LoginRepository : ILoginRepository
     {
