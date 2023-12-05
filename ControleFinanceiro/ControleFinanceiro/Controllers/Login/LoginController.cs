@@ -7,7 +7,7 @@ using ControleFinanceiro.Services.Interfaces;
 using System;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-namespace ControleFinanceiro.Controllers
+namespace ControleFinanceiro.Controllers.Login
 {
     public class LoginController : Controller
     {
@@ -45,7 +45,7 @@ namespace ControleFinanceiro.Controllers
 
                 var valueCookie = StringUtils.Base64Encode(resultLogin.Dados.Id + "\\" + resultLogin.Dados.NomeCompleto + "\\" + DateTime.Now.AddMinutes(1440));
                 _autenticacaoHelper.GravaSessao(new System.Web.HttpCookie(_autenticacaoHelper.NomeCokkie(), valueCookie));
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Inicio");
             }
             return View("Index", model);
         }

@@ -1,14 +1,15 @@
-﻿using ControleFinanceiro.Custom.Attribute;
+﻿using ControleFinanceiro.Controllers.Master;
+using ControleFinanceiro.Custom.Attribute;
 using ControleFinanceiro.Data.DTOs;
+using ControleFinanceiro.Data.Enumeradores;
 using ControleFinanceiro.Helpers;
 using ControleFinanceiro.Services.Interfaces;
-using ControleFinanceiro.Data.Enumeradores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
-namespace ControleFinanceiro.Controllers
+namespace ControleFinanceiro.Controllers.Configuracao.Usuario
 {
     public class UsuarioController : MasterController
     {
@@ -112,10 +113,5 @@ namespace ControleFinanceiro.Controllers
             return Json(retorno);
         }
 
-        [CustomAuthorize]
-        public ActionResult Perfil()
-        {
-            return View("Perfil", _usuarioService.BuscarPorId(_usuarioUsuarioId).Dados);
-        }
     }
 }

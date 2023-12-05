@@ -158,11 +158,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\ConfiguracaoController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MasterController.cs" />
-    <Compile Include="Controllers\UsuarioController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\Configuracao\ConfiguracaoController.cs" />
+    <Compile Include="Controllers\Configuracao\Usuario\PerfilController.cs" />
+    <Compile Include="Controllers\InicioController.cs" />
+    <Compile Include="Controllers\Master\MasterController.cs" />
+    <Compile Include="Controllers\Configuracao\Usuario\UsuarioController.cs" />
+    <Compile Include="Controllers\Login\LoginController.cs" />
     <Compile Include="Custom\Attribute\CustomAuthorize.cs" />
     <Compile Include="Data\DTOs\LoginDTO.cs" />
     <Compile Include="Data\DTOs\Request\UsuarioRequestDTO.cs" />
@@ -293,7 +294,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Inicio\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutLogin.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
@@ -303,7 +304,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Views\Usuario\Index.cshtml" />
-    <Content Include="Views\Usuario\Perfil.cshtml" />
+    <Content Include="Views\Perfil\Perfil.cshtml" />
     <Content Include="Views\Usuario\_UsuarioPartial.cshtml" />
     <Content Include="Views\Usuario\_ListaUsuarioPartial.cshtml" />
     <Content Include="Views\Usuario\NovoUsuario.cshtml" />

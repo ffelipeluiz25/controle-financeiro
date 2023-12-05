@@ -2,13 +2,16 @@
 using System.Web.Mvc;
 namespace ControleFinanceiro.Controllers
 {
-    public class HomeController : Controller
+    public class InicioController : Controller
     {
-        public HomeController() { }
+        public InicioController() { }
+
         [CustomAuthorize]
+        [Route("")]
+        [Route("/Inicio")]
         public ActionResult Index()
         {
-            return View();
+            return View("~/Views/Inicio/Index.cshtml");
         }
     }
 }

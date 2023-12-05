@@ -8,7 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 using System.Web.Routing;
-namespace ControleFinanceiro.Controllers
+namespace ControleFinanceiro.Controllers.Master
 {
     public class MasterController : Controller
     {
